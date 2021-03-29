@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.urbano.contacts">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_contatcs"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_contatcs_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Contacts">
+        <activity android:name=".activity.ContactsAppInfoActivity"></activity>
+        <activity android:name=".activity.ContactsSettingsActivity" />
+        <activity android:name=".activity.ContactsBinActivity" />
+        <activity android:name=".activity.ContactsInfoActivity" />
+        <activity android:name=".activity.ContactsAddActivity" />
+        <activity android:name=".activity.ContactsMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

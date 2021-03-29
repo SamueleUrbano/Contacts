@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rubrica</string>
+    <string name="app_setting">Impostazioni</string>
+    <string name="app_info">Informazioni</string>
+    <string name="contact_deleted">Contatti eliminati</string>
+    <string name="name_field">Nome</string>
+    <string name="surname_field">Cognome</string>
+    <string name="telephone_field">Telefono</string>
+    <string name="notes_field">Note</string>
+    <string name="cancel_button">Annulla</string>
+    <string name="save_button">Salva</string>
+    <string name="call_button">Chiama</string>
+    <string name="edit_button">Modifica</string>
+    <string name="delete_button">Elimina</string>
+    <string name="call_permission">Permesso negato</string>
+    <string name="delete_alert_title">Elimina contatto</string>
+    <string name="delete_alert_message">Sei sicuro di voler eliminare il contatto ?</string>
+    <string name="restore_alert_title">Ripristina contatto</string>
+    <string name="restore_alert_message">Sei sicuro di voler ripristinare il contatto ?</string>
+    <string name="general_settings">Generali</string>
+    <string name="orderby_settings">Ordina contatti per</string>
+    <string name="delete_settings">Mantieni contatti eliminati</string>
+    <string name="developer">Sviluppatore: Urbano Samuele</string>
+    <string name="version">"Versione: "</string>
+    <string name="app_scope">L\' App Rubrica, creata per salvare tutti i tuoi contatti.</string>
+    <string name="required_field">Alcuni campi obbligatori potrebbero essere vuoti</string>
+    <string name="email_send">Questo contatto non ha un\'email</string>
+    <string name="invalid_field">Il campo e-mail non è valido</string>
+    <string name="contacts_counter">Contatti:</string>
+    <string name="email_field">E-mail</string>
+    <string name="email_button">E-Mail</string>
+    <string name="orderby_default">Default</string>
+</resources>

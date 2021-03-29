@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="app_setting">Configuración</string>
+    <string name="app_info">Información</string>
+    <string name="contact_deleted">Contactos eliminados</string>
+    <string name="name_field">Nombre</string>
+    <string name="surname_field">Apellido</string>
+    <string name="telephone_field">Teléfono</string>
+    <string name="notes_field">Nota</string>
+    <string name="cancel_button">Cancelar</string>
+    <string name="save_button">Guardar</string>
+    <string name="call_button">Teléfono</string>
+    <string name="edit_button">Editar</string>
+    <string name="delete_button">Eliminar</string>
+    <string name="required_field">Algunos campos obligatorios pueden estar vacíos</string>
+    <string name="call_permission">Permiso denegado</string>
+    <string name="delete_alert_title">Borrar contacto</string>
+    <string name="delete_alert_message">Estás seguro de que deseas eliminar el contacto?</string>
+    <string name="restore_alert_title">Restablecer contacto</string>
+    <string name="restore_alert_message">Estás seguro de que deseas restablecer el contacto?</string>
+    <string name="general_settings">General</string>
+    <string name="orderby_settings">Ordenar contactos por</string>
+    <string name="delete_settings">Mantener contactos eliminados</string>
+    <string name="app_scope">La aplicación de libreta de direcciones, creada para guardar todos sus contactos.</string>
+    <string name="developer">Desarrollador: Urbano Samuele</string>
+    <string name="version">"Versión: "</string>
+    <string name="email_send">Este contacto no tiene correo electrónico</string>
+    <string name="invalid_field">El campo de correo electrónico no es válido</string>
+    <string name="contacts_counter">Contactos:</string>
+    <string name="email_field">E-mail</string>
+    <string name="email_button">E-Mail</string>
+    <string name="orderby_default">Default</string>
+</resources>

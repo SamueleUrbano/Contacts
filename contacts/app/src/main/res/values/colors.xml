@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="moncks_bay_red">#A21717</color>
+    <color name="hot_chillie_red">#D05656</color>
+    <color name="halfway_bluff_red">#DE7C64</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="for_ever_green">#78D07A</color>
+    <color name="for_ever_blue">#36AEE6</color>
+    <!-- <color name="soft_sky_gray">#E3E3E3</color> -->
+    <color name="image_background">#FFFFFFFF</color>
+</resources>
