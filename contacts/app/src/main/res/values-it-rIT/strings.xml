@@ -13,7 +13,6 @@
     <string name="call_button">Chiama</string>
     <string name="edit_button">Modifica</string>
     <string name="delete_button">Elimina</string>
-    <string name="call_permission">Permesso negato</string>
     <string name="delete_alert_title">Elimina contatto</string>
     <string name="delete_alert_message">Sei sicuro di voler eliminare il contatto ?</string>
     <string name="restore_alert_title">Ripristina contatto</string>
@@ -31,4 +30,9 @@
     <string name="email_field">E-mail</string>
     <string name="email_button">E-Mail</string>
     <string name="orderby_default">Default</string>
+    <string name="contact_already_exists">Questo contatto già esiste in Rubrica</string>
+    <string name="qr_code_button">Importa da Codice QR</string>
+    <string name="permission_denied">Permesso negato</string>
+    <string name="invalid_qr_code">Questo Codice QR non contiene un contatto</string>
+    <string name="generate_qr_code_button">Genera Codice QR del contatto</string>
 </resources>

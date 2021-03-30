@@ -14,7 +14,6 @@
     <string name="edit_button">Editar</string>
     <string name="delete_button">Eliminar</string>
     <string name="required_field">Algunos campos obligatorios pueden estar vacíos</string>
-    <string name="call_permission">Permiso denegado</string>
     <string name="delete_alert_title">Borrar contacto</string>
     <string name="delete_alert_message">Estás seguro de que deseas eliminar el contacto?</string>
     <string name="restore_alert_title">Restablecer contacto</string>
@@ -31,4 +30,9 @@
     <string name="email_field">E-mail</string>
     <string name="email_button">E-Mail</string>
     <string name="orderby_default">Default</string>
+    <string name="contact_already_exists">Este contacto ya existe en Agenda</string>
+    <string name="qr_code_button">Importar desde Código QR</string>
+    <string name="permission_denied">Permiso denegado</string>
+    <string name="invalid_qr_code">Este Código QR no contiene un contacto</string>
+    <string name="generate_qr_code_button">Generar Código QR de contacto</string>
 </resources>

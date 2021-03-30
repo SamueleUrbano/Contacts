@@ -37,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:layout_marginStart="2dp"
             android:text="@string/orderby_settings"
             android:textSize="20sp"
             android:gravity="start|center">
@@ -115,7 +116,7 @@
                 android:layout_weight="1.5"
                 android:layout_marginStart="2dp"
                 android:text="@string/delete_settings"
-                android:textSize="20sp"
+                android:textSize="14sp"
                 android:gravity="start|center">
             </TextView>
 

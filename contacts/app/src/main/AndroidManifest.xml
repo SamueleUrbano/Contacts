@@ -3,6 +3,7 @@
     package="com.urbano.contacts">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_contatcs_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Contacts">
-        <activity android:name=".activity.ContactsAppInfoActivity"></activity>
+        <activity android:name=".activity.QRCodeScanActivity"></activity>
+        <activity android:name=".activity.ContactsAppInfoActivity" />
         <activity android:name=".activity.ContactsSettingsActivity" />
         <activity android:name=".activity.ContactsBinActivity" />
         <activity android:name=".activity.ContactsInfoActivity" />

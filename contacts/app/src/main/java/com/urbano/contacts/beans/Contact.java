@@ -120,4 +120,8 @@ public class Contact implements Serializable {
     public String getCompoundName() {
         return name + " " + surname;
     }
+
+    public void setCompoundName(String compoundName) {
+
+    }
 }

@@ -1,10 +1,12 @@
 package com.urbano.contacts.activity;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -17,6 +19,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.urbano.contacts.R;
 import com.urbano.contacts.beans.Contact;
 import com.urbano.contacts.database.DatabaseManager;
+import com.urbano.contacts.dialog.QRViewDialog;
 import com.urbano.contacts.util.Filler;
 import com.urbano.contacts.util.Utility;
 
@@ -32,6 +35,7 @@ public class ContactsInfoActivity extends AppCompatActivity implements View.OnCl
     private MaterialButton emailButton;
     private MaterialButton editButton;
     private MaterialButton deleteButton;
+    private MaterialButton generateQRCodeButton;
 
     // The text views
     private TextView infoCompoundName;
@@ -96,13 +100,24 @@ public class ContactsInfoActivity extends AppCompatActivity implements View.OnCl
         } else if (v.getId() == this.deleteButton.getId()) {
             // On delete_button pressed
             // Check if keep_deleted is true (keep contacts after deleting)
-            if (Boolean.parseBoolean(Utility.readStateFromShared("keep_deleted", "true", this))) {
-                this.contact.setDeleted(true);
-                DatabaseManager.getInstance(this).getContactDao().update(this.contact);
-            } else {
-                DatabaseManager.getInstance(this).getContactDao().delete(this.contact);
-            }
-            finish();
+            new AlertDialog.Builder(v.getContext())
+                    .setTitle(R.string.delete_alert_title)
+                    .setMessage(R.string.delete_alert_message)
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            if (Boolean.parseBoolean(Utility.readStateFromShared("keep_deleted", "true", getApplicationContext()))) {
+                                contact.setDeleted(true);
+                                DatabaseManager.getInstance(getApplicationContext()).getContactDao().update(contact);
+                            } else {
+                                DatabaseManager.getInstance(getApplicationContext()).getContactDao().delete(contact);
+                            }
+                            finish();
+                        }
+                    })
+                    .setNegativeButton(android.R.string.no, null)
+                    .show();
+        } else if (v.getId() == this.generateQRCodeButton.getId()) {
+            new QRViewDialog(this, Utility.generateQrCode(this.contact)).show();
         }
     }
 
@@ -117,7 +132,7 @@ public class ContactsInfoActivity extends AppCompatActivity implements View.OnCl
                 startActivity(call);
             } else {
                 // Making a Snack bar
-                Snackbar snackbar = Snackbar.make(findViewById(R.id.call_button), R.string.call_permission, Snackbar.LENGTH_SHORT);
+                Snackbar snackbar = Snackbar.make(findViewById(R.id.call_button), R.string.permission_denied, Snackbar.LENGTH_SHORT);
                 snackbar.getView()
                         .findViewById(com.google.android.material.R.id.snackbar_text)
                         .setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
@@ -147,6 +162,7 @@ public class ContactsInfoActivity extends AppCompatActivity implements View.OnCl
         this.emailButton = findViewById(R.id.email_button);
         this.editButton = findViewById(R.id.edit_button);
         this.deleteButton = findViewById(R.id.delete_button);
+        this.generateQRCodeButton = findViewById(R.id.generate_qr_code_button);
         this.infoCompoundName = findViewById(R.id.info_compound_name);
         this.infoTelephone = findViewById(R.id.info_telephone);
         this.infoEmail = findViewById(R.id.info_email);
@@ -157,5 +173,6 @@ public class ContactsInfoActivity extends AppCompatActivity implements View.OnCl
         this.emailButton.setOnClickListener(this);
         this.editButton.setOnClickListener(this);
         this.deleteButton.setOnClickListener(this);
+        this.generateQRCodeButton.setOnClickListener(this);
     }
 }

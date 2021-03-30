@@ -23,7 +23,7 @@ public interface ContactDao {
      * @param c {type: Contact} the Contact.
      */
     @Insert
-    public void insert(Contact c);
+    public long insert(Contact c);
 
     /**
      * Select the Contacts.
